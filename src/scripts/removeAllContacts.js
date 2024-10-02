@@ -2,11 +2,12 @@ import { writeContacts } from "../utils/writeContacts.js";
 
 export const removeAllContacts = async () => {
     try {
-        await writeContacts(JSON.stringify([], null, 2), 'utf-8')
-        console.log('All contacts successfully removed.');
+      await writeContacts([])
+      console.log('All contacts was deleted');
     } catch (error) {
-      console.error('Error removing contacts:', error);
+      console.error('Error delete:', error);
       throw error;
-}};
+    }
+  };
 
 removeAllContacts();

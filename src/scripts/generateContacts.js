@@ -12,7 +12,7 @@ const generateContacts = async (number) => {
             newContact.push(createFakeContact())
         }
 
-        const updateContact = [...readDbFile, newContact]
+        const updateContact = [...readDbFile, ...newContact]
 
         await writeContacts(updateContact)
 
